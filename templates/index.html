@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Prediction Center</title>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h1>Student Placement Prediction Center</h1>
+        <label>CGPA :</label><br>
+        <input type="text" name="cgpa"><br><br>
+
+        <label>IQ :</label><br>
+        <input name="iq" type="text" required="True"><br><br>
+
+        <label>Profile Score :</label><br>
+        <input type="text" name="profile_score" required="True"><br><br>
+
+        <input type="submit" value="predict">
+
+        <div style="border:1px;">
+            {% if result %}
+                {{ result }}
+            {% endif %}
+        </div>
+
+
+    </form>
+
+</body>
+</html>
